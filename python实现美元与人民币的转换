@@ -1,0 +1,17 @@
+# CurrencyConvert
+# 1美元=6.7744元
+while True:
+    TempStr = input("请输入带有符号的货币值($10或者￥10)：")
+    # 判断是否属于美元，并执行转换
+    if TempStr[0]=="$":
+        b=int(TempStr[1:])*6.7744
+        print(b)
+    # 判断是否属于人民币，并执行转换
+    elif TempStr[0]=='￥':
+        b=int(TempStr[1:])/6.7744
+        print(b)
+    # 输入错误时，提示信息
+    elif TempStr=='break':
+        break
+    else:
+        print("请输入带有符号的货币值!")
